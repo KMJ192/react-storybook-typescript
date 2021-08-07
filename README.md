@@ -8,20 +8,16 @@
 
 ### Project start
 - yarn
-  + build
 ```
+// build
 yarn build
-```
-  + development
-```
+// development
 yarn storybook
 ```
 - npm
-  + build
 ```
+// build
 npm build
-```
-  + development
-```
+// development
 npm storybook
 ```
