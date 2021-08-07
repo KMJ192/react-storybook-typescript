@@ -1,0 +1,41 @@
+{
+  "name": "react-storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 9009 -s public"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.16",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-image": "^2.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@storybook/react": "^6.3.6",
+    "@types/classnames": "^2.3.1",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.1",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "classnames": "^2.3.1",
+    "node-sass": "^6.0.1",
+    "rollup": "^2.56.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "sass-loader": "10.0.5",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}
