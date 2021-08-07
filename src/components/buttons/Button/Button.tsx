@@ -4,7 +4,6 @@ import classNames from "classnames";
 import styles from "./Button.module.scss";
 
 export enum ButtonType {
-  DEFAULT = "default",
   PRIMARY = "primary",
   SECONDARY = "secondary",
 }
@@ -15,7 +14,7 @@ export interface Props {
   theme?: ButtonType;
 }
 
-function Button({ children, theme = ButtonType.DEFAULT }: Props) {
+function Button({ children, theme = ButtonType.PRIMARY }: Props) {
   const classNameProps = classNames(styles.default, styles[theme]);
   return (
     <button className={classNameProps}>{children}</button>

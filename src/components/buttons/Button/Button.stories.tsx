@@ -10,13 +10,9 @@ export default {
   },
 };
 
-export const defaultButton = () => {
-  return <Button>default 버튼</Button>;
-};
-
 export const primaryButton = () => {
-  return <Button theme={ButtonType.PRIMARY}>primary 버튼</Button>;
+  return <Button theme={ButtonType.PRIMARY}>primary btn</Button>;
 };
 export const secondaryButton = () => {
-  return <Button theme={ButtonType.SECONDARY}>secondary 버튼</Button>;
+  return <Button theme={ButtonType.SECONDARY}>secondary btn</Button>;
 };

@@ -5,3 +5,23 @@
 - rollup
 - react
 - babel
+
+### Project start
+- yarn
+  + build
+```
+yarn build
+```
+  + development
+```
+yarn storybook
+```
+- npm
+  + build
+```
+npm build
+```
+  + development
+```
+npm storybook
+```
