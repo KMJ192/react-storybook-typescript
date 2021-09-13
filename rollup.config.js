@@ -6,6 +6,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
+import analyze from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -19,32 +20,39 @@ export default {
       dir: 'build',
       format: 'esm',
       exports: 'named',
-      sourcemap: true
-    }
+      sourcemap: true,
+      preserveModules: true,
+      preserveModulesRoot: '.',
+    },
+    {
+      dir: 'build',
+      format: 'cjs',
+      exports: 'named',
+      sourcemap: false,
+    },
   ],
-  module: {
-
-  },
-  preserveModules: true,
   plugins: [
     peerDepsExternal(),
     image(),
     svgr(),
     resolve({ extensions }),
     commonjs({
-      include: /node_modules/
+      include: /node_modules/,
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     babel({
-      extensions, 
-      include: ['src/**/*'], 
-      babelHelpers: 'bundled'
+      extensions,
+      include: ['src/**/*'],
+      babelHelpers: 'bundled',
     }),
     postcss({
       extract: false,
       modules: true,
-      use: ['sass']
+      use: ['sass'],
     }),
-    terser()
-  ]
-}
+    analyze({
+      summaryOnly: true,
+    }),
+    terser(),
+  ],
+};

@@ -5,3 +5,4 @@ webpack*
 babel*
 postcss*
 node_modules/*
+rollup.config.js
