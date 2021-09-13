@@ -31,6 +31,7 @@
     "@typescript-eslint/parser": "^4.29.3",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
+    "css-loader": "5.2.6",
     "eslint": "7.2.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -50,6 +51,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "sass-loader": "10.0.5",
+    "style-loader": "2.0.0",
     "typescript": "^4.3.5",
     "typescript-plugin-css-modules": "^3.4.0"
   }
