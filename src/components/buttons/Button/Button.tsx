@@ -1,11 +1,11 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
 
-import styles from "./Button.module.scss";
+import classNames from 'classnames';
+import styles from './Button.module.scss';
 
 export enum ButtonType {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
 }
 
 export interface Props {
@@ -14,11 +14,13 @@ export interface Props {
   theme?: ButtonType;
 }
 
-function Button({ children, theme = ButtonType.PRIMARY }: Props) {
+Button.defualtProps = {
+  theme: ButtonType.PRIMARY,
+};
+
+function Button({ children, theme = ButtonType.PRIMARY }: Props): JSX.Element {
   const classNameProps = classNames(styles.default, styles[theme]);
-  return (
-    <button className={classNameProps}>{children}</button>
-  );
+  return <button className={classNameProps}>{children}</button>;
 }
 
 export default Button;

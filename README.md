@@ -12,12 +12,27 @@
 // build
 yarn build
 // development
-yarn storybook
+yarn start
 ```
 - npm
 ```
 // build
 npm build
 // development
-npm storybook
+npm start
+```
+
+### remove
+```
+yarn clear
+```
+
+### reinstall
+```
+yarn reinstall
+```
+
+### peerDep
+```
+yarn add -D --ignore-scripts install-peers react react-dom
 ```
